@@ -6,4 +6,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\blazorbcamp.models\blazorbcamp.models.csproj" />
+    </ItemGroup>
+
 </Project>

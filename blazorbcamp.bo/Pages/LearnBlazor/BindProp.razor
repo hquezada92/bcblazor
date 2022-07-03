@@ -1,0 +1,20 @@
+﻿@page "/learnblazor/bindprop"
+
+<h3>Product</h3>
+Name: @Product.Name <br/>
+Active: @Product.IsActive <br/>
+Price: @Product.Price <br/>
+This Product is: @(Product.IsActive?"IsActive":"Inactive")<br/><br/>
+
+<label>Active: </label><input type="checkbox" @bind="Product.IsActive" /><br/>
+<label>Price: </label><input type="number" @bind="Product.Price" @bind:event="oninput" />
+
+@code {
+    private ProductModel Product = new()
+    {
+        Id = 1,
+        Name = "Rose candle",
+        IsActive = true,
+        Price = 10.99
+    };
+}
